@@ -1,0 +1,1 @@
+[01-Apr-2019 22:57:48 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/zedeteco/dnx3.zedete.com/resi/module/login.php on line 10
