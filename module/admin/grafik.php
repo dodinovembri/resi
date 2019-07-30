@@ -36,7 +36,7 @@
 			     //Lakukan Normalisasi dengan rumus pada langkah 2
 			     //Cari Max atau min dari tiap kolom Matrik
 			     $crMax = mysqli_query($koneksi, "SELECT max(C1) as maxC1, 
-			          max(C2) as maxC2,
+			          min(C2) as minC2,
 			          max(C3) as maxC3,
 			          max(C4) as maxC4,
 			          max(C5) as maxC5,
@@ -65,7 +65,7 @@
 			      $jumlah= ($dt3['C1'])+($dt3['C2'])+($dt3['C3'])+($dt3['C4']);
 			      $poin= round(
 			       (($dt3['C1']/$max['maxC1'])*$bobot[0])+
-			       (($dt3['C2']/$max['maxC2'])*$bobot[1])+
+			       (($max['minC2']/$dt3['C2'])*$bobot[1])+
 			       (($dt3['C3']/$max['maxC3'])*$bobot[2])+
 			       (($dt3['C4']/$max['maxC4'])*$bobot[3])+
 			       (($dt3['C5']/$max['maxC5'])*$bobot[4])+

@@ -106,7 +106,7 @@
 			       <td>$no</td>
 			       <td>".getNama($dt2['id_alternatif'])."</td>
 			       <td>".round($dt2['C1']/$max['maxC1'],2)."</td>
-			       <td>".round($dt2['C2']/$max['minC2'],2)."</td>
+			       <td>".round($max['minC2']/$dt2['C2'],2)."</td>
 			       <td>".round($dt2['C3']/$max['maxC3'],2)."</td>
 			       <td>".round($dt2['C4']/$max['maxC4'],2)."</td>
 			       <td>".round($dt2['C5']/$max['maxC5'],2)."</td>
@@ -143,7 +143,7 @@
 			      $jumlah= ($dt3['C1'])+($dt3['C2'])+($dt3['C3'])+($dt3['C4']);
 			      $poin= round(
 			       (($dt3['C1']/$max['maxC1'])*$bobot[0])+
-			       (($dt3['C2']/$max['minC2'])*$bobot[1])+
+			       (($max['minC2']/$dt3['C2'])*$bobot[1])+
 			       (($dt3['C3']/$max['maxC3'])*$bobot[2])+
 			       (($dt3['C4']/$max['maxC4'])*$bobot[3])+
 			       (($dt3['C5']/$max['maxC5'])*$bobot[4])+
