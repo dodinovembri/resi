@@ -33,8 +33,8 @@
 					 //Cari Max atau min dari tiap kolom Matrik
 					 $crMax = mysqli_query($koneksi, "SELECT max(C1) as maxC1, 
 					      min(C2) as minC2,
-					      max(C3) as maxC3,
-					      max(C4) as maxC4,
+					      min(C3) as minC3,
+					      min(C4) as minC4,
 					      max(C4) as maxC5,
 					      max(C4) as maxC6 
 					   FROM alternatif");
@@ -66,12 +66,12 @@
 					 while ($dt3 = mysqli_fetch_array($sql3)) {
 					  $jumlah= ($dt3['C1'])+($dt3['C2'])+($dt3['C3'])+($dt3['C4'])+($dt3['C5'])+($dt3['C6']);
 					  $poin= round(
-					   (($dt3['C1']/$max['maxC1'])*$bobot[0])+
-					   (($max['minC2']/$dt3['C2'])*$bobot[1])+
-					   (($dt3['C3']/$max['maxC3'])*$bobot[2])+
-					   (($dt3['C4']/$max['maxC4'])*$bobot[3])+
-					   (($dt3['C5']/$max['maxC5'])*$bobot[4])+
-					   (($dt3['C6']/$max['maxC6'])*$bobot[5]),3);
+				       (($dt3['C1']/$max['maxC1'])*$bobot[0])+
+				       (($max['minC2']/$dt3['C2'])*$bobot[1])+
+				       (($max['minC3']/$dt3['C3'])*$bobot[2])+
+				       (($max['minC4']/$dt3['C4'])*$bobot[3])+
+				       (($dt3['C5']/$max['maxC5'])*$bobot[4])+
+				       (($dt3['C6']/$max['maxC6'])*$bobot[5]),3);
 					  $id_alternatif = $dt3['id_alternatif'];
 
 					  $data[]=array('nama'=>getNama($dt3['id_alternatif']),
