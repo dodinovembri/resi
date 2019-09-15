@@ -86,17 +86,17 @@
 								$C4_t = "Bergelombang";
 							}
 							elseif ($C4 == 5) {
-								$C4_t = "Berlubang";
+								$C4_t = "Berlubang"; 
 							}
 							// 				
 							if ($C5 == 2){
-								$C5_t = "Jalan Lokal";
+								$C5_t = "Jalan Lingkungan";
 							}
 							elseif ($C5 == 3) {
-								$C5_t = "Jalan Kolektor";
+								$C5_t = "Jalan Lokal";
 							}
 							elseif ($C5 == 4) {
-								$C5_t = "Jalan Arteri";
+								$C5_t = "Jalan Kolektor Primer";
 							}
 							// 					
 							if ($C6 == 1){
