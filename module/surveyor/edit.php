@@ -137,9 +137,9 @@
 												<label>Fungsi Jalan</label>
 												<select type="text" class="form-control" name="C5" placeholder="Fungsi Jalan" required>
 													<option value="<?php echo $C5; ?>"><?php echo $C5_t; ?></option>
-													<option value="2">Jalan Lokal</option>
-													<option value="3">Jalan Kolektor</option>
-													<option value="4">Jalan Arteri</option>
+													<option value="2">Jalan Lingkungan</option>
+													<option value="3">Jalan Lokal</option>
+													<option value="4">Jalan Kolektor Primer</option>
 											</select>
 											</div>
 											<div class="cf-input">
